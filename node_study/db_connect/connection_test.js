@@ -1,11 +1,11 @@
 var mysql = require('mysql');
 
 var db = mysql.createConnection({
-	host : 'mtmsmtms.cafe24.com',
+	host : 'localhost',
 	port : 3306,
-	user : 'mtmsmtms',
-	password : 'mtms2016',
-	database : 'mtmsmtms'
+	user : 'cc',
+	password : 'aa',
+	database : 'bb'
 });
 db.connect(function(err){
 	if (err) {
