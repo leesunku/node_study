@@ -1,10 +1,10 @@
 // node.js가 이벤트 기반이라는데, 정확하게 어떤 부분이지?
 
 // 파일쓰기 예제
-var fs = require('fs');
+const fs = require('fs');
 
 //...
-var contents = fs.readFile('hello.txt', 'utf-8', (err, contents) => {
+const contents = fs.readFile('hello.txt', 'utf-8', (err, contents) => {
 	console.log('read 1 : ' + contents);
 });
 //...

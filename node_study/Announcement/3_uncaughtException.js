@@ -7,11 +7,10 @@ process.on('uncaughtException', (error) => {
 	console.log('예외 발생 = ' + error);
 });
 
-var count = 0;
+let count = 0;
 // 2초마다 예외발생
-var id = setInterval(() => {
+const id = setInterval(() => {
 	count++;
-	
 	if (count == 3){ clearInterval(id);}
 	// 선언하지 않은 함수 호출
 	error_run();

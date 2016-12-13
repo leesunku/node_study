@@ -10,7 +10,7 @@ node.js에서 가장 특징적인 부분 - 이벤트 기반 비동기 프로그�
 window.addEventListener('load', function() {});
 
 // 자바스크립트의 표준 이벤트 연결 메서드
-process.addEventListener('eventName', function(){});
+process.addEventListener('eventName', function() {});
 
 // 노드의 이벤트 메서드
-process.on('eventName', function(){});
+process.on('eventName', function() {});
