@@ -1,0 +1,12 @@
+var OS = require('os');
+console.log("OS.hostname() = " + OS.hostname());
+console.log("OS.type() = " + OS.type());
+console.log("OS.platform() = " + OS.platform());
+console.log("OS.arch() = " + OS.arch());
+console.log("OS.release() = " + OS.release());
+console.log("OS.uptime() = " + OS.uptime());
+console.log("OS.loadavg() =" + OS.loadavg());
+console.log("OS.totalmem() = " + OS.totalmem());
+console.log("OS.freemem() = " + OS.freemem());
+console.log("OS.cpus() = %j", OS.cpus());
+console.log("OS.getNetworkInterfaces() = %j", OS.getNetworkInterfaces());
