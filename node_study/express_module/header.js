@@ -12,4 +12,4 @@ app.use( (req, res) => {
 
 http.createServer(app).listen(8082, ()=> {
 	console.log('server run')
-}).l
+})
