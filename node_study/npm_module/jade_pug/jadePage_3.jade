@@ -1,0 +1,11 @@
+html
+	head
+		title 타이틀
+	body
+		h1 #{name}
+		h2= age
+		hr
+		- for (let i = 0 ; i < 10; i++ ){
+			p
+				a(href="http://") go to #{i}
+		- }
