@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "/socket.io/socket.io.js"></script>
+<script>
+	window.onload = () => {
+		const socket = io.connect();
+		
+		socket.on('server_client', (data) => {
+			let view = document.getElementById('view').outerHTML;
+			view = view + '<div>' + data + "</div>";
+			document.getElementById('view').innerHTML = view
+		});
+		
+		document.getElementById('button').onclick = () => {
+			const text = document.getElementById('text').value;
+			socket.emit('client_server', text);
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<input type = "text" id = "text"/>
+	<input type = "button" id = "button" value = "echo" />
+	<div id = "view">
+	
+	</div>
+</body>
+</html>
