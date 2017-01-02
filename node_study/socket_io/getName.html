@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get Name</title>
+<script src = "/socket.io/socket.io.js"></script>
+<script>
+	window.onload = () => {
+		const socket = io.connect();
+		let name = prompt('이름을 입력해주세요.', '이름')
+		
+		socket.emit('setName', name)
+		
+		socket.on('responseName', (data) => {
+			console.log(data)
+		});
+		
+		document.getElementById('button').onclick = () => {
+			socket.emit('getName')
+		}
+	}
+</script>
+</head>
+<body>
+	<button id = "button">이름 가져오기</button>
+</body>
+</html>
