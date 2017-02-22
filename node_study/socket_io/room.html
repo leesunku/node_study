@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	window.onload = () => {
+		let room = prompt('방 이름을 입력하세요.', '');
+		let socket = io.connect();
+		
+		socket.emit('join', room)
+		socket.on('message', (data) => {
+			let view = document.getElementById('view').outerHTML;
+			view = view + '<div>' + data + "</div>";
+			document.getElementById('view').innerHTML = view
+		})
+		
+		document.getElementById('button').onclick = () => {
+			socket.emit('message', 'socket.io room message')
+		}
+	}
+	
+</script>
+</head>
+<body>
+<button id = "button">EMIT</button>
+<div id = "view">
+</div>
+</body>
+</html>
