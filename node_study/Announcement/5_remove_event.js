@@ -6,7 +6,7 @@ const onUncaughtException = (err) => {
 process.on('uncaughtException', onUncaughtException);
 
 // 이벤트 제거
-//process.removeListener('uncaughtException', onUncaughtException);
+process.removeListener('uncaughtException', onUncaughtException);
 
 setInterval(() => {
 	error_run();

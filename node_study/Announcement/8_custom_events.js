@@ -1,5 +1,6 @@
 /**
- * node.js에서 이벤트를 연결할 수 있는 모든 객체는 EventEmitter 객체를 상속 받는다.
+ * node.js에서 이벤트를 연결할 수 있는 모든 객체는 
+ * EventEmitter 객체를 상속 받는다.
  * 그래서, 이벤트를 연결할 수 있다.
  * EventEmitter 객체로 새로운 이벤트를 만들어 보자.
  * 
@@ -17,6 +18,8 @@
  * 
  */
 
+/*
+
 const custom_events = new process.EventEmitter();
 
 custom_events.on('custom_event', function (){
@@ -31,13 +34,15 @@ setInterval(function () {
 	custom_events.emit('custom_event');
 }, 1000);
 
+*/
+
 
 //DeprecationWarning : 지원중단 경고
 
 // suggest 1
-/*
 
-const events = require('events');
+
+/*const events = require('events');
 const util = require('util');
 // 객체 생성
 const Custom_Event = function() {
@@ -50,16 +55,16 @@ const print_event = () => {
 	console.log("이벤트 발생");
 }
 
-const custom_event = new events.EventEmitter;
+const custom_event = new Custom_Event();
 custom_event.on('cus_eve', print_event);
-custom_event.emit('cus_eve');
+custom_event.emit('cus_eve');*/
 
-*/
+
 
 
 
 //suggest 2
-/*
+
 
 const events = require('events')
 
@@ -70,4 +75,4 @@ custom_event.on('cus_eve', () => {
 })
 custom_event.emit('cus_eve');
 
-*/
+

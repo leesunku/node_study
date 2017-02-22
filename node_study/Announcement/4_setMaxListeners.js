@@ -1,6 +1,6 @@
 // setMaxListeners(limit) : 이벤트 리스너 연결 개수를 조절
 
-//process.setMaxListeners(15);
+process.setMaxListeners(0);
 
 process.on('exit', ()=> {});
 process.on('exit', ()=> {});
